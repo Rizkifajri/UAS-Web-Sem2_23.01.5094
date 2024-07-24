@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f2f2f2;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #706dc6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .login {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Log In</h1>
+
+        <form action="#">
+            <label for="Username">Username:</label>
+            <input type="text" id="Username" name="Username" required>
+
+            <label for="kataSandi">Kata Sandi:</label>
+            <input type="password" id="kataSandi" name="kataSandi" required>
+
+            <label for="ulangiKataSandi">Ulang Kata Sandi:</label>
+            <input type="password" id="ulangiKataSandi" name="ulangiKataSandi" required>
+
+        </form>
+
+        <div class="login">
+            <a href="Dashboard.html"><button class="btn btn-danger shadow" type="submit">Log In</button></a>
+        </div>
+    </div>
+</body>
+</html>

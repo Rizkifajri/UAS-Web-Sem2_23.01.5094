@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard Dosen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 20px auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #706dc6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            justify-content: flex-start;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+        .sidebar .text {
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 65px;
+            text-align: center;
+            background: #706dc6;
+            letter-spacing: 1px;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .sidebar nav {
+            width: 100%;
+        }
+        .sidebar nav a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            margin: 5px 0;
+            background-color: #030303;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .sidebar nav a:hover {
+            background-color: #575757;
+        }
+        .sidebar nav a img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .main-content {
+            margin-left: 210px; 
+            padding: 20px;
+            flex: 1;
+        }
+        .header {
+            background-color: #706dc6;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header .logout {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .header .logout button {
+            background-color: #c81f1d;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .header .logout button:hover {
+            background-color: #a11a17;
+        }
+        .profile-top-right {
+            position: absolute;
+            top: 50px;
+            right: 150px;
+            text-align: right;
+        }
+        .profile-top-right img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+        .profile-top-right h2, .profile-top-right p {
+            margin: 0;
+            color: white;
+        }
+        .profile p {
+            margin: 0;
+            color: #666;
+        }
+        .main-content {
+            margin-left: 210px; 
+            padding: 20px;
+            flex: 1;
+        }
+        .schedule {
+            margin-top: 20px; 
+        }
+        .schedule .title {
+            background-color: #706dc6;
+            color: white;
+            padding: 5px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .schedule table {
+            width: 100%; 
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .schedule table, .schedule th, .schedule td {
+            border: 1px solid #ccc;
+        }
+        .schedule th, .schedule td {
+            padding: 8px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="text">Menu</div>
+        <nav>
+            <a href="Dashboard.html"><img src="https://img.icons8.com/?size=100&id=XFqvv26UmZNX&format=png&color=FFFFFF" alt="Menu">Dashboard</a>
+            <a href="Tambah Data.html"><img src="https://img.icons8.com/?size=100&id=SHvO1OP7Ada9&format=png&color=FFFFFF" alt="Menu">Tambah data</a>
+            <a href="Rekapitulasi Nilai.html"><img src="https://img.icons8.com/?size=100&id=47823&format=png&color=FFFFFF" alt="Rekapitulasi Nilai">Rekapitulasi Nilai</a>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="header">
+                <div class="logout">
+                    <button onclick="location.href='login.html'">Logout</button>
+                </div>
+                <h1>Dashboard Dosen</h1>
+                <p>UNIVERSITAS AMIKOM YOGYAKARTA</p>
+            </div>
+            <div class="profile-top-right">
+                <img src="https://image.shutterstock.com/image-vector/businessman-icon-260nw-564112600.jpg" alt="Profile Picture">
+                <h2>Nama Dosen</h2>
+                <p>Nomer Induk</p>
+            </div>
+            <div class="schedule">
+                <h3 class="title">Rekapitulasi Nilai</h3>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>NAMA MAHASISWA</th>
+                            <th>TUGAS HARIAN</th>
+                            <th>UTS</th>
+                            <th>UAS</th>
+                            <th>RESPONSI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>7</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>8</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>9</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>10</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>11</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>12</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>13</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>14</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <td>15</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

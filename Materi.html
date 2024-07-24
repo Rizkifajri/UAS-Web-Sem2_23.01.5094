@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Tambah Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: calc(100% - 210px); 
+            margin: 20px auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #706dc6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            justify-content: flex-start;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+        .sidebar .text {
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 65px;
+            text-align: center;
+            background: #706dc6;
+            letter-spacing: 1px;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .sidebar nav {
+            width: 100%;
+        }
+        .sidebar nav a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            margin: 5px 0;
+            background-color: #030303;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .sidebar nav a:hover {
+            background-color: #575757;
+        }
+        .sidebar nav a img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .main-content {
+            margin-left: 200px; 
+            padding: 20px;
+            flex: 1;
+        }
+        .header {
+            background-color: #706dc6;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header .logout {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .header .logout button {
+            background-color: #c81f1d;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .header .logout button:hover {
+            background-color: #a11a17;
+        }
+        .profile-top-right {
+            position: absolute;
+            top: 50px;
+            right: 150px;
+            text-align: right;
+        }
+        .profile-top-right img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+        .profile-top-right h2, .profile-top-right p {
+            margin: 0;
+            color: white;
+        }
+        .profile p {
+            margin: 0;
+            color: #666;
+        }
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .form-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .button-row {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px; 
+        }
+        .button-row a {
+            flex: 1;
+        }
+        .button-row a button {
+            width: 100%;
+            background-color: #706dc6;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button-row a button:hover {
+            background-color: #575757;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input[type="text"], .form-group input[type="date"], .form-group textarea, .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .form-group button {
+            background-color: #706dc6;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="text">Menu</div>
+        <nav>
+            <a href="Dashboard.html"><img src="https://img.icons8.com/?size=100&id=XFqvv26UmZNX&format=png&color=FFFFFF" alt="Menu">Dashboard</a>
+            <a href="Tambah Data.html"><img src="https://img.icons8.com/?size=100&id=SHvO1OP7Ada9&format=png&color=FFFFFF" alt="Menu">Tambah data</a>
+            <a href="Rekapitulasi Nilai.html"><img src="https://img.icons8.com/?size=100&id=47823&format=png&color=FFFFFF" alt="Rekapitulasi Nilai">Rekapitulasi Nilai</a>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="header">
+                <div class="logout">
+                    <button onclick="location.href='login.html'">Logout</button>
+                </div>
+                <h1>Tambah Data</h1>
+                <p>UNIVERSITAS AMIKOM YOGYAKARTA</p>
+            </div>
+            <div class="profile-top-right">
+                <img src="https://image.shutterstock.com/image-vector/businessman-icon-260nw-564112600.jpg" alt="Profile Picture">
+                <h2>Nama Dosen</h2>
+                <p>Nomer Induk</p>
+            </div>
+            <div class="form-container">
+                <div class="button-row">
+                    <a href="Tambah Data.html" class="btn"><button type="button">Tugas</button></a>
+                    <a href="Kuis.html" class="btn"><button type="button">Kuis</button></a>
+                    <a href="Materi.html" class="btn"><button type="button">Materi</button></a>
+                </div>
+                <h2>Form Tambah Data</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="judul-tugas">Judul Materi</label>
+                        <input type="text" id="judul-tugas" name="judul-tugas" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="deskripsi">Deskripsi</label>
+                        <textarea id="deskripsi" name="deskripsi" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="lampiran">Tambahkan Lampiran</label>
+                        <input type="file" id="lampiran" name="lampiran">
+                    </div>
+                    <div class="form-group">
+                        <label for="topik">Tambahkan Topik</label>
+                        <input type="text" id="topik" name="topik" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="batas-waktu">Atur Tanggal Batas Waktu</label>
+                        <input type="date" id="batas-waktu" name="batas-waktu" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Posting</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
